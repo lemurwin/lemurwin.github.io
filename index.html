@@ -31,9 +31,28 @@ footer{
   right: 0;
   bottom: 0;
   left: 0;
-  padding-top:2px;
-}
 
+
+}
+@media screen
+  and (device-width: 320px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+footer{
+  font-size: 1.1em;
+  background-color:#222;
+  color:#fff;
+  margin-top:10px;
+   padding-top:2px;
+
+  }
+  .jumbotron{
+    padding-top:100px;
+    margin-top:50px;
+  }
+}
 body{
   font-family: 'Hind Vadodara', sans-serif;
   background: url("./resources/background.jpg")center 0px no-repeat fixed;
