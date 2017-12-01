@@ -229,743 +229,121 @@ html{
       </div>
 
     </div>
-    <div class="row" style="padding-bottom:20px;" id="tableContents">
-
-        <div class="col-md-8 col-md-offset-2">
-              <a data-toggle="collapse" href="#contents"><h3 id="tablecontents">Table of Contents<span class="caret"></span></h3></a>
-              <div class="row collapse col-xs-11 col-xs-offset-1" id="contents">
-              <ol type="I">
-                <a href="#introduction"class="hashscroll"><li>Introduction</li></a>
-                <a href="#potentialsolution"class="hashscroll"><li>A Potential Solution</li></a>
-                <a href="#Research" class="hashscroll"><li>Research</li></a>
-                  <ol type="i">
-                    <a href="#Survey"class="hashscroll"><li>Anonymous Survey</li></a>
-                    <a href="#Interviews"class="hashscroll"><li>Interviews</li></a>
-                    <a href="#interviewtakeaway"class="hashscroll"><li>Interview Takeaways</li></a>
-                  </ol>
-                <a href="#heuristics"class="hashscroll"><li>Heuristic Analysis</li></a>
-                <a href="#Personas"class="hashscroll"><li>Empathy Maps, Personas, and User Stories</li></a>
-                <a href="#LeanUX"class="hashscroll"><li>Creating a Minimum Viable Product</li></a>
-
-                <a href="#ContentStrategy"class="hashscroll"><li>Information Architecture and User Flows</li></a>
-                  <ol type="i">
-                    <a href="#cardsort"class="hashscroll"><li>Card Sorting</li></a>
-                    <a href="#sitemap"class="hashscroll"><li>Site Map and User Flows</li></a>
-                  </ol>
-                <a href="#Wireframes"class="hashscroll"><li>Wireframes and Prototypes</li></a>
-                <a href="#Prototyping"class="hashscroll"><li>Testing the Prototype</li></a>
-                <a href="#conclusion"class="hashscroll"><li>Conclusion and Takeaways</li></a>
-              </ol>
-            </div>
-          </div>
-      </div>
-
-</div>
-
-
-
-
-
-    <div class="container-fluid">
-      <div class="row">
-
-
-          <div class="col-md-8 col-md-offset-2"><h2 id="introduction">The Problem with Meeting on Meetup</h2></div>
-          <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
-        </div>
-      </div>
-    </div>
-
-<!--
-    <div class="container-fluid text-center"style="padding-top:20px">
-      <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8"><img src="./resources/meetup_small.png"width="100%" height="auto"></div>
-      </div>
-    </div>
-
-  -->
-
-
-
-
-
-<div class="container-fluid" >
-      <div class="row">
-
-        <div class="col-md-6 col-md-offset-3">
-            <p>Meetup.com is a popular platform for finding and attending events near you.
-              People use it to deepen their professional skills, explore personal interests,
-              and generally to socialize with people nearby that have similar interests.</p>
-
-            <p>Meetup’s tagline is <em>“Find your people”</em>, which I have done, however, after
-              attending a few of these events, I realized that there isn’t a great way to
-              stay connected to the people I meet at events. There <em>is</em> a minimal messaging system,
-              but in order to connect with someone on a social network,
-              I would have to remember their name or remember to get a
-              business card. </p>
-
-              <p>If I fail at either, (which is likely to happen after meeting 20+ people)
-              I could check the RSVP list on the event page on Meetup (easy, usually 25–30 people),
-                 but if that person didn’t RSVP, I would have to browse the member list (difficult,
-                 sometimes 1000+ members).</p>
-             <p>Once I succeeded at getting a name, I would then have to find them on
-               Facebook and go through the process of adding them to the right list to
-               hide personal information, or finding them on LinkedIn, where the UI is
-               frightful and you are prompted at every other screen to connect with
-               someone from your email contact list.</p>
-       </div>
-     </div>
-</div>
-
-
-<div class="test" style="background-attachment: fixed;">
-  <div style="background-color:rgba(255, 255, 255, .7); width:100%; height:100%;"></div></div>
-
-
-       <!-- MODAL TESTING AREA -->
-<!--
-       <div id="friendModal" class="modal custom fade" role="dialog">
-         <div class="modal-image" style="">
-
-           <div class="modal-content">
-             <div class="modal-header">
-               <button type="button" class="close" data-dismiss="modal">&times;</button>
-             </div>
-
-             <div class="modal-body">
-               <p>People at a Meetup</p>
-               <img src="./resources/friends.jpeg" width="100%">
-
-             </div>
-
-             <div class="modal-footer">
-               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-             </div>
-           </div>
-         </div>
-
-
-       </div>
--->
-
-<div class="container-fluid">
-     <div class="row">
-
-       <div class="col-md-8 col-md-offset-2"><h2 id="potentialsolution">A Potential Solution</h2>
-
-       </div>
-       <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
-     </div>
-
-     <div class="row">
-
-       <div class="col-md-6 col-md-offset-3">
-         <p>I sought to address this this unnecessary multi-platform complexity
-         by bringing everything back into one platform.
-         By allowing people to “friend” each other on Meetup,
-         users would be encouraged to stay within the framework for events,
-         networking, and communication. Having a profile would subsequently allow people to
-         view their friends’ Meetup groups and interests, which would encourage
-         exploration of interests one might not necessarily explore on his/her own.</p>
-       </div>
-     </div>
-     <div class="row">
-       <div class="col-md-2"></div>
-       <div class="col-md-8" ><h2 id="Research">Research (Surveys and Interviews)</h2></div>
-       <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
-     </div>
-     <div class="row">
-
-       <div class="col-md-6 col-md-offset-3">
-         <h3 id="Survey">Anonymous Survey</h3>
-         <p>To validate this theory, we need some evidence.
-            I started by recruiting volunteers across a variety of social networking
-            platforms including Meetup, Facebook, Reddit, and LinkedIn. With 28
-            survey respondents and 5 interviewees, the data was eye-opening. Of
-            those who took the survey, everyone had used some form of social
-            network for longer than 3 years. Over 89% of respondents reported both
-            using social media multiple times per day and using social networking
-            to find an event at least once a month. That’s a lot of socializing!</p>
-          </div>
-        </div>
-
-
-    <div class="row">
-
-      <div class="col-md-6 col-md-offset-3"><a data-toggle="modal" href="#friendModal0"><img src="./resources/infoprev.png" width="100%"></a><h5 class="text-center">Survey Results Infographic</h5></div>
-    </div>
-
-<!-- Modal Infographic -->
-
-    <div id="friendModal0" class="modal fade" role="dialog">
-      <div class="modal-image" style="">
-
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-
-          <div class="modal-body text-center">
-            <p>Survey Results</p>
-            <img src="./resources/infographic.png" width="100%">
-
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <!--
-    End Infographic
-  -->
-</div>
-  <div class="container-fluid">
-    <div class="row">
-
-      <div class="col-md-6 col-md-offset-3">
-      <h3 id="Interviews">Interviews for Qualitative Data</h3>
-        <p>For my interviews, I chose mainly people who
-          responded that they used or had heard of Meetup, and were in the
-          demographic of social network users. All 4 of the 18–34 interviewees
-          reported finding it difficult to meet new friends and socialize after
-          college. Interestingly, the one older user (55–64) I interviewed said
-          that she didn’t have a need nor want for more friends.</p>
-        <blockquote>“I’m a little cautious about adding
-          people to my Facebook… It’s very difficult to go back in and delete all
-          these stupid things that have been posted over the years… So I decided
-          to start fresh with a new Facebook account.”</blockquote>
-        <p>Something that came up among all the younger
-          (read: millenial) population was a nervousness or fear of new friends
-          and professionals seeing incriminating photos that they might have been
-          tagged in during their younger years. Some opted to create entirely new
-          accounts or risk using Facebook by changing their security settings.</p>
-        <blockquote>“I don’t even accept LinkedIn
-          requests unless I can personally vouch for their professional
-          qualifications.”</blockquote>
-          <p>Another issue with connecting with people arose
-            from LinkedIn. Two of the millenial interviewees reported feeling
-            intimidated to start casual conversations on a “professional” platform,
-            while the older respondent reported that she wouldn’t even connect with
-            a person if she couldn’t vouch for his/her skill because she viewed the
-            platform as a digital resumé.</p>
-      <h3 id="interviewtakeaway">Interview Takeaways</h3>
-        <p>When I explored the issues further, I found that
-        all the interviewees used social networks as vetting tools when meeting
-        someone new and needed some background information. Existing platforms
-        were either too personal or too professional. This is where Meetup can
-        fill a niche opening in social networking with a casual, public-facing
-        profile system that people will feel comfortable connecting with strangers on.</p>
-        </div>
-    </div>
-
-
-  <div class="test1" style="background-attachment: fixed;">
-    <div style="background-color:rgba(255, 255, 255, .7); width:100%; height:100%;"></div></div>
-
-  <div class="container-fluid" >
-
-    <div class="row">
-
-      <div class="col-md-8 col-md-offset-2">
-        <h2 id="heuristics">Heuristic Analysis</h2>
-      </div>
-      <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
-    </div>
-
-    <div class="row">
-
-      <div class="col-md-6 col-md-offset-3">
-        <p>Ease of use is a huge factor in keeping users happy, and as such,
-          comparing the existing platform with its competitors was important in
-          the development of new features because users will already be
-          familiar with their use.</p>
-        <h3>Meetup.com</h3>
-        <p>Meetup has some minor issues with its usability that break the
-          pattern of general web use. For example, below, the widely accepted
-          “logo in the top left is home” pattern is ignored, and has been
-          placed in the middle of the navigation bar.</p>
-        <p>However, Meetup does have a strong match between other existing
-          patterns, such as calendar view, page consistency across the site,
-          and well-labeled actions and buttons. Finding and attending events is
-          very easy with large buttons and accessible, understandable language.</p>
-
-          <h3>Other Platforms</h3>
-          <p>In order to gauge Meetup’s competitiveness with other platforms, I
-            analyzed a few other well-known players, including <b>Facebook</b> and
-            <b>Eventbrite</b>, as well as a lesser-known platform, <b>CitySocializer</b>.</p>
-          <p>Surprisingly, for as popular Facebook is among users, it has some
-            poor heuristics in its events finding function. Most noticeably,
-            navigating to different subcategories reveals inconsistent sort
-            methods where the parameters for sorting were not immediately transparent.</p>
-          <p>Eventbrite, on the other hand, was very strong in error prevention
-            and recovering from errors, and had strong flexibility for users by
-            offering the ability to sort events in many different ways.</p>
-      </div>
-    </div>
-
-
-      </div>
-    </div>
-
   </div>
-
   <div class="container-fluid">
-    <div class="row">
-
-      <div class="col-md-8 col-md-offset-2">
-        <h2 id="Personas">Empathy Maps, Personas, and Scenarios</h2>
-      </div>
-
-      <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
-    </div>
-
-    <div class="row">
-
-      <div class="col-md-6 col-md-offset-3">
-        <h3>Who Uses Meetup?</h3>
-      </div>
-    </div>
-
-    <div class="row">
-
-      <div class="col-md-6 col-md-offset-3">
-        <p>After going through the data from the research, I found enough
-          common features between the users to generate three different personas:
-          <b>Paul Professional</b>, <b>Sally Socializer</b>, and <b>Hank Hobbyist</b>.
-          Paul is someone who attends events mainly to expand his professional skills,
-          Sally attends to see friends and explore her area, and Hank attends
-          meetups to try out new hobbies.</p>
-      </div>
-    </div>
-
-    <div class="row" style="margin-top:20px;">
-
-      <div class="col-md-8 col-md-offset-2"><a data-toggle="modal" href="#personamodal"><img src="./resources/sallypersona.png" width="100%"><h5 class="text-center">Personas and Empathy Maps</h5></a></div>
-
-    </div>
-
-
-  <div id="personamodal" class="modal fade" role="dialog">
-    <div class="modal-image" style="">
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-
-        <div class="modal-body text-center">
-          <p>Personas and Empathy Maps</p>
-          <a href="./resources/PersonasandEmpathy.png"><img src="./resources/PersonasandEmpathy.png" width="100%"></a>
-
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-    <div class="row">
-
-      <div class="col-md-6 col-md-offset-3"><p>Each of these personas actually stand to benefit
-        from the introduction of an improved social platform. Paul can utilize
-        the upgraded friend platform to explore skills and interests that pertain
-        to his professional connections. Sally can share media from meetups with
-        friends and other members, and Hank can explore hobbies that his friends
-        are interested in.</p></div>
-    </div>
-  </div>
-
-  <div class="container-fluid">
-    <div class="row">
-
-      <div class="col-md-8 col-md-offset-2"><h2 id="LeanUX">A Minimum Viable Product</h2></div>
-      <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
-    </div>
-
-    <div class="row">
-
-      <div class="col-md-6 col-md-offset-3"><blockquote>“As a user, I want to see other people’s
-        interests so I can get to know them better and attend similar meetups.”</blockquote>
-      </div>
-    </div>
-
-
-    <div class="row">
-
-      <div class="col-md-6 col-md-offset-3"><h3 >User Stories and the MVP</h3>
-
-        <p>Once I discovered my Personas, I could use their
-        motivations to guide what features an MVP would need, and how each persona
-        would use them. All three personas would need to connect with other users
-        at some point, so friending a person seemed to be the most relevant feature.</p>
-
-        <p>Following the <b>“As a User, I want…”</b> pattern, I came up with a variety
-          of stories that each persona would follow, and then compared them
-          against each other to come up with a list of features that would apply
-          to all three personas. On this list was messaging ability, ability to
-          view other user interests, a list of members attending, and a social
-          wall or board for other users to post media.</p>
-      </div>
-    </div>
-</div>
-<div class="test2" style="background-attachment: fixed;">
-  <div style="background-color:rgba(255, 255, 255, .7); width:100%; height:100%;"></div></div>
-
-<div class="container-fluid">
-    <div class="row">
-
-      <div class="col-md-8 col-md-offset-2">
-        <h2 id="ContentStrategy">Information Architecture and User Flows</h2>
-
-        </div>
-          <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
-    </div>
-
-    <div class="row">
-
-      <div class="col-md-6 col-md-offset-3">
-      <h3 id="cardsort">Card Sorting for Clarity</h3>
-      <p>After deciding on the features for the MVP, I had to organize where
-        each feature should reside on the platform. To create cards, I selected
-        user stories and converted them into simple actions. Then, I used
-        existing locations on the website as the categories in which to sort.
-        I recruited 4 people, within the age demographic, and both who had used
-        and not used Meetup, to participate in a card sort. After the sort, I
-        was able to decide where each feature would be found.</p>
-
-          <a data-toggle="modal" href="#cardsortmodal"><img src="./resources/cardsort.jpeg" width="100%"><h5 class="text-center">Card Sort</h5></a>
-        <h3 id="sitemap"><em>Where</em> does it go, and how do we <em>use</em> it?</h3>
-        <p>Once I had my cards sorted, the sitemap came easily; I could
-          immediately place the cards that everyone had agreed on, but for the
-          cards where there had been disagreement, I based their locations on
-          existing patterns that other social networking sites used.</p>
-      </div>
-
-    </div>
-
-
-    <div id="cardsortmodal" class="modal fade" role="dialog">
-      <div class="modal-image" style="">
-
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-
-          <div class="modal-body text-center">
-            <p>Card Sort Results</p>
-            <a href="./resources/cardsort.jpeg"><img src="./resources/cardsort.jpeg" width="100%"></a>
-
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
     <div class="row">
 
         <div class="col-md-8 col-md-offset-2">
-          <a href="#sitemapmodal" data-toggle="modal"><img src="./resources/sitemap.png" width="100%" style="border:1px solid black"><h5 class="text-center">Site Map</h5>
-        </div></a>
-
+          <h2>Project Summary</h2>
+          </div>
+      </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <p>In 2017, I enrolled in a 100 hour UX Design intensive training through
+              Springboard.com to improve my research knowledge and design process.
+              My final project was to develop a new product or improve an existing one
+              through <em>research</em>, <em>testing</em>, and <em>design</em>.</p>
+            <p>The project I chose to undertake was the reimagining of a popular networking platform,
+              <b>Meetup.com</b>, by integrating new social networking functions
+              that would include improving profile page content, the ability to connect
+              with new people within the platform, and the ability to explore new interests
+              based on these new connections.</p>
+            <p>The idea for this project arose from my own frustrations with networking
+              in a new area. When meeting new people that I wanted to remain in contact
+              with, I would either need to use Meetup's very simple messaging system (which does not
+              grant me any information about the other's interests), or choose another platform
+              with which to maintain a relationship, such as Facebook or LinkedIn,
+              which have their own downsides, Facebook with privacy, and LinkedIn with
+              persistent reminders to invite people to connect.</p>
+          </div>
     </div>
-
-    <div id="sitemapmodal" class="modal fade" role="dialog">
-      <div class="modal-image" style="">
-
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-
-          <div class="modal-body text-center">
-            <p>Final Site Map</p>
-            <a href="./resources/sitemap.png"><img src="./resources/sitemap.png" width="100%"></a>
-
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2"><h2>Project Planning: Research</h2>
       </div>
     </div>
 
 
     <div class="row">
-
       <div class="col-md-6 col-md-offset-3">
-          <p style="margin-top:20px; margin-bottom:20px">With the site map in place and user stories written, I could easily
-          follow the actions a user would take for each story and turn them
-          into a visual flow-chart.</p>
+        <h3>Project Fit and Competitive Analysis</h3>
+        <p>To discover if the project had viability and interest, I surveyed 30 people
+        distributed throughout existing platforms, including Facebook, Meetup, and Reddit.
+        The findings revealed that many users found Facebook too revealing and familiar to use when connecting
+        with strangers, while LinkedIn felt too formal. This left an opening in the market
+        for a casual profile that can be used to meet new people without revealing much
+        personal information.</p>
       </div>
     </div>
-
     <div class="row">
 
-      <div class="col-md-6 col-md-offset-3">
-        <a data-toggle="modal" href="#userflowmodal"><img src="./resources/userflow.png" width="100%" style="border:1px solid black"><h5 class="text-center">User Flow for Adding a Friend</h5></a>
+      <div class="col-md-8 col-md-offset-2">
+        <h2>Personas, Empathy Maps, and User Flows</h2>
 
-        <p>Visualising the user flows like this helped a great deal when
-          catching errors and omissions in functionality and pages. For example,
-          I was able to catch where I had forgotten to list upcoming events
-          on the site map, which saved me time when I started drawing wireframes.</p>
-
-        </div>
-      </div>
-
-      <div id="userflowmodal" class="modal fade" role="dialog">
-        <div class="modal-image" style="">
-
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-
-            <div class="modal-body text-center">
-              <p>Example User Flow</p>
-              <a href="./resources/userflow.png"><img src="./resources/userflow.png" width="100%"></a>
-
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-</div>
-<div class="container-fluid">
-      <div class="row">
-
-        <div class="col-md-8 col-md-offset-2"><h2 id="Wireframes">Wireframes and Prototypes</h2></div>
-        <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
-      </div>
-
-      <div class="row">
-
-        <div class="col-md-6 col-md-offset-3">
-          <h3 >Initial Wireframes</h3>
-          <p>Because Meetup already has a basic profile, I started designing
-            from the existing layout to facilitate a smooth transition and site
-            homogeneity.</p>
-        </div>
-      </div>
-
-      <div class="row">
-
-        <div class="col-md-8 col-md-offset-2"><a data-toggle="modal" href="#wireframemodal"><img src="./resources/wireframes.jpeg" width="100%"><h5 class="text-center">Initial Profile Layout, Left, and Revised Tabbed Layout, Right</h5></div></a>
-      </div>
-
-
-      <div id="wireframemodal" class="modal fade" role="dialog">
-        <div class="modal-image" style="">
-
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-
-            <div class="modal-body text-center">
-              <p>Hand Drawn Wireframes</p>
-              <a href="./resources/wireframes.jpeg"><img src="./resources/wireframes.jpeg" width="100%"></a>
-
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="row">
-
-        <div class="col-md-6 col-md-offset-3">
-
-          <p>While the site map and user flows helped with the organization of
-            what information should be on <em>which</em> page, the wireframing helped to
-            organize the information <em>on</em> the page layout. Initially, I thought
-            to show all the relevant information at once, but this approach
-            resulted in a look that was too crowded and busy to easily discern
-            what each subsection was.</p>
-
-          <p>Taking a page from Facebook, I opted for a tabbed approach to
-            separate the distinct subsections of Group Memberships, Friends,
-            Interests, and a Bulletin Board. This resulted in a cleaner,
-            easily navigable layout that doesn’t distract the user’s eye.</p>
-
-          <h3 >Building a Prototype</h3>
-          <p>Because this project was based on an existing platform, I was able
-            to streamline much of the process by using screenshots of the
-            existing platform and photoshopping in some of the features. Once
-            they were edited, I imported them into Sketch
-            to have a better overview of flow and composition of each page.</p>
-          <p>With the layouts completed and my wireframes converted to higher
-            fidelity, I exported the boards to InVision to layout navigation
-            using the web platform.</p>
-
-        </div>
-      </div>
-
-
-
-      <div class="row">
-
-        <div class="col-md-3"></div>
-        <a <a href="https://invis.io/E7D2EVJMN" target="blank">
-          <div class="col-md-6" style="background-color:#f64060; padding-top:10px; padding-bottom:10px; min-height:123px; margin-left:10px; margin-right:10px">
-              <div class="col-xs-8 text-center"style="padding:15px"><h3 style="color:white">View Invision Prototype Here</h3></div>
-              <div class="col-xs-4 text-center" style="padding:2px"><img src="./resources/prototype.png" width="100px" height="100px" ></div>
-          </div>
-        </a>
-
-
-      </div>
-
-
-
-      <div class="row" style="margin-top:10px">
-
-        <div class="col-md-6 col-md-offset-3"><p>One of the challenges I found when creating
-          the prototype was providing enough functionality while still staying
-          simple enough not to take all my time to add every feature. As a
-          guideline and troubleshooting for this, I started by creating screens
-          that were based on my user flows and adding more as necessary.</p></div>
-      </div>
-
+    </div>
   </div>
-
-
-
-
-<div class="container-fluid">
   <div class="row">
-
-    <div class="col-md-8 col-md-offset-2"><h2 id="Prototyping">Testing the Prototype</h2></div>
-    <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
-  </div>
-
-  <div class="row">
-
     <div class="col-md-6 col-md-offset-3">
-      <p>Because my goal was to improve the social
-      functioning of the platform, I tested users to see if the redesign
-      was usable. As a result, I asked participants to 1) Find their profile,
-      2) Post media to a friend, 3) Find out what groups a friend was part of,
-      4) View the interests of a friend or stranger, and 5) View meetups based
-      on a specific interest.</p>
-
-      <h3>Initial Troubleshooting</h3>
-      <blockquote>“This is confusing. Why is there so much going on? This isn’t good.”</blockquote>
-
-      <p>Unfortunately, testing the prototype did not go as smoothly as I had
-        planned. I was unable to schedule participants who fit into the main
-        demographics I had researched and who were current Meetup users. As a
-        result, two of the subjects were immediately baffled by the landing page
-        that would appear after a login and set a poor first impression in the test.</p>
-
-      <h3>Learning from Errors</h3>
-
-      <p>However, this confusion provided a great learning insight into first
-        time users. All the participants, feeling confused by the landing page,
-        headed to the search function first. By using the added universal
-        search in the navigation bar, participants were able to easily
-        accomplish all the tasks.</p>
-
-        <blockquote>“Oh, this part is kind of like Facebook. That’s easy.”</blockquote>
-
-        <p>Once the participants found the updated profile, which borrows
-          patterns from existing social networks, the rest of the testing went
-          relatively smoothly. The tabbed organization resulted in quick
-          information retrieval as expected.</p>
-
-        <p>I had a bit of a learning curve when facilitating the testing,
-          as I hadn’t thought that the order of tasks mattered as much until I
-          noticed my first participant struggling with task 5, which I had
-          initially placed as task 1. After my first test participant, I
-          learned that the order of tasks should build from simple to complex,
-          providing a scaffold for information. I hadn’t noticed this problem
-          initially because I had worked so closely with the platform that I
-          didn’t realize which actions users would find to be complex. After
-          revising the order, the other two participants struggled far less.</p>
-
-        </div>
-
-      </div>
+      <p>In order to keep the goals of the project on course, I developed personas using the survey
+        results combined with individual interviews. This allowed me to ensure that I would not
+        lose sight of the functions that I was intending to implement.</p>
     </div>
-
-    <div class="container-fluid">
-      <div class="row">
-
-        <div class="col-md-8 col-md-offset-2">
-          <h2 id="conclusion">Takeaways and Further Testing</h2></div>
-          <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
-      </div>
-      <div class="row">
-
-        <div class="col-md-6 col-md-offset-3">
-          <p>In conclusion, the data indicates that there is a strong fit for
-            an improved profile/person-to-person network. By implementing
-            existing social network patterns for organizing profile data,
-            Meetup could add a great deal of social functionality without
-            much user confusion. By improving users’ ability to connect with
-            other users, Meetup would encourage more time spent on the platform
-            and promote platform activity by allowing users to explore more
-            relevant meetup events.</p>
-
-          <h3>Future Outcomes and Testing</h3>
-          <p>I would like to revisit this project with an enhanced way of
-            testing user activity. From what I could tell from testing, the
-            prototype I presented didn’t have enough functionality to showcase
-            Meetup’s ability to find and browse events, which I believe would
-            lead to more appreciation of the social functions. I would also like
-            to test the prototypes with people who have more experience with
-            Meetup.com to see how well existing users would handle the
-            implementation of the improved social system.</p>
-
-        </div>
-
-      </div>
-      <div class="row">
-
-        <div class="col-md-6 col-md-offset-3">
-          <img src="./resources/meetup_small.png" width="100%">
-        </div>
-      </div>
-
-      <div class="row">
-      <div class="col-md-3"></div>
-      <a href="https://www.linkedin.com/in/miles-merwin-08a718bb/">
-        <div class="col-md-6" style="border:1px solid lightgrey; padding-top:10px; padding-bottom:10px; min-height:123px; margin-top:25px;" id="linkedin">
-            <div class="col-xs-8"style="padding:15px; color:black"><h4>Miles Merwin | Professional Profile | LinkedIn</h4><h5>www.linkedin.com</h5></div>
-            <div class="col-xs-4 text-center" style="padding:2px; "><img src="./resources/profilelinkedin.jpg" width="100px" height="100px" style="border:1px solid lightgrey"></div>
-        </div>
-      </a>
+  </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2"><img src="./resources/sallypersona.png" width="100%"><h5 class="text-center">Personas and Empathy Maps</h5> </div>
 
     </div>
-      </div>
+    <div class="row">
+
+      <div class="col-md-8 col-md-offset-2">
+        <h2>Card Sorts and Information Architecture</h2>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <p>After brainstorming the features of an MVP (Minimum Viable Product), I enlisted
+      volunteers to a card sort, and from the results, created a site layout where
+      each feature would live.</p>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col-md-6">
+  <img src="./resources/cardsort.jpeg" width="100%"><h5 class="text-center">Card Sort</h5></div>
+  <div class="col-md-6">
+  <img src="./resources/sitemap.png" width="100%" style="border:1px solid black"><h5 class="text-center">Site Map</h5></div>
+</div>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2"><h2>Prototyping and Testing</h2>
+  </div>
+</div>
 
 
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+    <p>Using Sketch and Invision, with a little bit of Photoshop, I created a
+      navigable prototype that illustrated basic features
+      of the new social functions. You can view the prototype <a href="https://invis.io/E7D2EVJMN" target="blank">here</a>.</p>
+      <p>To test users, I video conferenced with interviewees and had them share their screen
+        so that I could watch their interactions and take notes. More imporantly,
+        I asked them to think aloud and explain why they clicked where they did.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2"><h2>Further Reading</h2>
+  </div>
+</div>
 
 
-
-
-
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <p>This page is only a brief summary. To read an in-depth discussion about the project,
+      please visit the article on <a href="https://medium.com/@lemurwin/springboard-capstone-project-f6c48f2ce897">Medium.com</a>.
+  </div>
+</div>
 
       <footer style="padding-top:25px">
       <div class="container-fluid text-center">
@@ -997,42 +375,5 @@ html{
 
 
 
-      <script>
-      $(document).ready(function(){
-      // Select all links with hashes
 
-      $('.hashscroll').click(function(event) {
-        // On-page links
-        if (
-          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-          &&
-          location.hostname == this.hostname
-        ) {
-          // Figure out element to scroll to
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          // Does a scroll target exist?
-          if (target.length) {
-            // Only prevent default if animation is actually gonna happen
-            event.preventDefault();
-            $('html, body').animate({
-              scrollTop: target.offset().top
-            }, 1000, function() {
-              // Callback after animation
-              // Must change focus!
-              var $target = $(target);
-              $target.focus();
-              if ($target.is(":focus")) { // Checking if the target was focused
-                return false;
-              } else {
-                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-                $target.focus(); // Set focus again
-              };
-            });
-          }
-        }
-      });
-      });
-
-      </script>
   </body>
