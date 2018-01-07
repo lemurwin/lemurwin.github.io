@@ -8,193 +8,33 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link href='https://fonts.googleapis.com/css?family=Hind+Vadodara:300' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Hind+Vadodara:600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,700" rel="stylesheet">
 
 <script src="https://use.fontawesome.com/fbbc7a65d4.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99333597-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-99333597-1');
-</script>
-
+<link rel="stylesheet" href="./resources/index.css">
+<script src="./resources/actions.js"></script>
 
 
   <style>
-html{
-  font-size:16px;
-}
-
-  body{
-    font-size:1.2em;
-    font-family: 'Hind Vadodara', sans-serif;}
-    #nav{
-      padding:0px 30px;
-    }
-    h1{
-      font-weight:600;
-    }
-    h2{
-      font-weight:600;
-      border-bottom:1px solid black;
-
-    }
-    h3{
-      font-weight:600;
-
-    }
-
-    p{
-      font-weight:300;
-      line-height: 1.6;
-      padding-bottom:10px;
-    }
-    #tableContents a{
-      color:white
-    }
-    @media only screen and (min-width:992px) {
-      .modal-image{
-        width:60%;
-        margin-left:20%;
-      }
-    }
-    .modal-image{
-      margin-top:55px;
-      margin-bottom:50px;
-
-    }
-    .prototype{
-      margin-left: 10%;
-      width:80%;
-    }
-    .test {
-      height: 400px;
-      background:url("./resources/friends.jpeg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      }
-    .test1 {
-      height: 400px;
-      background:url("./resources/logosbackground.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      }
-    .test2 {
-      height: 400px;
-      background:url("./resources/cardsort.jpeg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      }
-
-      blockquote{
-        font-size: 1.3em;
-        font-style:italic;
-      }
-      footer{
-        font-size: .9em;
-        background-color:white;
-        color:black;
-        margin-top:10px;
-        padding-top:2px;
-      }
-      footer a{
-        color:black;
-      }
-
-      h1:before {
-        display: block;
-        content: " ";
-        margin-top: -82px;
-        height: 82px;
-        visibility: hidden;
-
-      }
-
-      h2:before {
-        display: block;
-        content: " ";
-        margin-top: -55px;
-        height: 55px;
-        visibility: hidden;
-
-      }
-
-      h3:before {
-        display: block;
-        content: " ";
-        margin-top: -50px;
-        height: 50px;
-        visibility: hidden;
-
-      }
-      .backtotop{
-        padding: 0px;
-        padding-bottom: -46px;
-        font-size:.7em;
-        margin-top:30px;
-        color:black;
-
-
-      }
-      @media only screen and (max-width:992px) {
-        footer p{
-          font-size: .75em;
-        }
-        #linkedin{
-          margin-left: 10px;
-          margin-right: 10px;
-        }
-        .backtotop{
-          padding: 0px;
-          margin-bottom: 25px;
-          font-size:.7em;
-          margin-top:0px;
-          text-align: right;
-
-      }
-      @media only screen and (max-width:768px){
-        #icons{
-          width:50px;
-          height:50px;
-        }
-        p{
-          font-size:80%;
-        }
-
-
-        }
-      }
-
-
-
-
-
   </style>
 </head>
 
 
   <body>
-    <div class="container-fluid">
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-           <div class="navbar-header">
-               <a class="navbar-brand" href="./index.html" style="font-size:1.2em; color:white">Miles Merwin</a>
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-          </div>
+  <div class="container">
+            <nav class="navbar navbar-default" role="navigation">
+          			<div class="container">
+                   <div class="navbar-header">
+                       <a class="navbar-brand" href="./index.html" style="font-size:2em; color:grey;">Miles Merwin</a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                  </div>
 
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -222,27 +62,30 @@ html{
 
 
 
-  <div class="container-fluid" style="margin-top:50px; background-color:#ed1c40;">
-    <div class="row" style=" padding-bottom:0px; padding-top:10px">
-      <div class=""></div>
-      <div class="col-md-8 col-md-offset-2"><h1 style="color:white" id="top">Meetup Case Study for Springboard UX Workshop</h1>
+  <div class="container">
+    <div class="row" style="margin-bottom:10px;">
 
-          <p style="color:white">A Friendly Addition to Meetup.com</p>
+      <div class="col-sm-8 col-sm-offset-2" ><h1 id="top">Meetup Case Study for Springboard UX Workshop</h1>
+
+          <p>A Friendly Addition to Meetup.com</p>
       </div>
 
     </div>
   </div>
-  <div class="container-fluid">
+
+
+
+  <div class="container">
     <div class="row">
 
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-sm-8 col-sm-offset-2 subheading">
           <h2>The Problem With Meeting on Meetup</h2>
           </div>
       </div>
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <p>In 2017, I enrolled in a 100 hour UX Design intensive training through
-              Springboard.com to improve my research knowledge and design process.
+    <div class="row" style="margin-top:10px">
+        <div class="col-sm-6 col-sm-offset-3">
+            <p>In 2017, I completed a 100 hour UX Design intensive training
+              to improve my research knowledge and design process.
               My final project was to develop a new product or improve an existing one
               through <em>research</em>, <em>testing</em>, and <em>design</em>.</p>
             <p>The project I chose to undertake was the reimagining of a popular networking platform,
@@ -250,23 +93,23 @@ html{
               that would include improving profile page content, the ability to connect
               with new people within the platform, and the ability to explore new interests
               based on these new connections.</p>
-            <p>The idea for this project arose from my own frustrations with networking
+          <!--  <p>The idea for this project arose from my own frustrations with networking
               in a new area. When meeting new people that I wanted to remain in contact
               with, I would either need to use Meetup's very simple messaging system (which does not
               grant me any information about the other's interests), or choose another platform
               with which to maintain a relationship, such as Facebook or LinkedIn,
               which have their own downsides, Facebook with privacy, and LinkedIn with
-              persistent reminders to invite people to connect.</p>
+              persistent reminders to invite people to connect.</p>-->
           </div>
     </div>
     <div class="row">
-      <div class="col-md-8 col-md-offset-2"><h2>Project Planning: Research</h2>
+      <div class="col-sm-8 col-sm-offset-2 subheading"><h2>Project Planning: Research</h2>
       </div>
     </div>
 
 
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-sm-6 col-sm-offset-3">
         <h3>Project Fit and Competitive Analysis</h3>
         <p>To discover if the project had viability and interest, I surveyed 30 people
         distributed throughout existing platforms, including Facebook, Meetup, and Reddit.
@@ -278,99 +121,117 @@ html{
     </div>
     <div class="row">
 
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-sm-8 col-sm-offset-2 subheading">
         <h2>Personas, Empathy Maps, and User Flows</h2>
 
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <p>In order to keep the goals of the project on course, I developed personas using the survey
-        results combined with individual interviews. This allowed me to ensure that I would not
-        lose sight of the functions that I was intending to implement.</p>
+  <div class="row" style="margin-top:15px;">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h3>Who are the users?</h3>
+      <p>By dissecting and analyzing the survey data, I created a set of User Personas that
+      I used to guide the direction of this project. They represented 3 main archetypes of
+    people use Meetup: <b>Professional Networkers</b>, <b>Socializers</b>, and <b>Skill Builders</b>.</p>
+    <p>Each persona has individual motivations and personalities, which affect
+      their goals and how they interact with the platform.</p>
     </div>
+
+
   </div>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2"><img src="./resources/sallypersona.png" width="100%"><h5 class="text-center">Personas and Empathy Maps</h5> </div>
+    <div class="row" style="margin-bottom:15px; margin-top:15px;">
+      <div class="col-sm-4"><img src="./resources/PersonaPaul.png" width="100%" style="border:1px solid lightgrey"></div>
+      <div class="col-sm-4"><img src="./resources/PersonaSally.png" width="100%" style="border:1px solid lightgrey"></div>
+      <div class="col-sm-4"><img src="./resources/PersonaHank.png" width="100%" style="border:1px solid lightgrey"> </div>
 
     </div>
     <div class="row">
 
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-sm-8 col-sm-offset-2 subheading">
         <h2>Card Sorts and Information Architecture</h2>
 
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <p>After brainstorming the features of an MVP (Minimum Viable Product), I enlisted
-      volunteers to a card sort, and from the results, created a site layout where
-      each feature would live.</p>
-    </div>
+
   </div>
 
-<div class="row">
-  <div class="col-md-6">
+<div class="row" style="margin-top:15px">
+
+  <div class="col-sm-5 col-sm-offset-1">
+    <div class="col-sm-12">
+      <h3>But where does it all go?</h3>
+    <p>Once I had brainestormed the features of an MVP (Minimum Viable Product), I enlisted
+    volunteers for a card sort and created a site layout from the results where
+    each feature is found.</p></div>
+    <p>
+    <img src="./resources/sitemap.png" width="100%" style="border:1px solid lightgrey"><h5 class="text-center">Site Map</h5>
+  </div>
+  <div class="col-sm-5">
   <img src="./resources/cardsort.jpeg" width="100%"><h5 class="text-center">Card Sort</h5></div>
-  <div class="col-md-6">
-  <img src="./resources/sitemap.png" width="100%" style="border:1px solid black"><h5 class="text-center">Site Map</h5></div>
+
+
 </div>
 
 <div class="row">
-  <div class="col-md-8 col-md-offset-2"><h2>Prototyping and Testing</h2>
+  <div class="col-sm-8 col-sm-offset-2 subheading"><h2>Prototyping and Testing</h2>
   </div>
 </div>
 
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-sm-8 col-sm-offset-2">
 
-    <p>Using Sketch and Invision, with a little bit of Photoshop, I created a
-      navigable prototype that illustrated basic features
-      of the new social functions. You can view the prototype <a href="https://invis.io/E7D2EVJMN" target="blank">here</a>.</p>
-      <p>To test users, I video conferenced with interviewees and had them share their screen
-        so that I could watch their interactions and take notes. More imporantly,
-        I asked them to think aloud and explain why they clicked where they did.</p>
+    <p>Using Sketch, Invision, and a little bit of Photoshop, I created a
+      navigable prototype to test basic user interaction. You can view the prototype <a href="https://invis.io/E7D2EVJMN" target="blank">here</a>.</p>
+      <p>I gathered user feedback from sharing their screen
+        so that I could take notes on their interactions. More imporantly,
+        I had them think aloud and explain their thought process as they interacted
+        with the site.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2" style="border:1px solid lightgrey">
+    <img src="./resources/2.png" width="100%" class="hoverimg">
+
+      </div>
+    </div>
+
+
+
+
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2 subheading"><h2>Further Reading</h2>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-8 col-md-offset-2"><h2>Further Reading</h2>
-  </div>
-</div>
-
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-sm-6 col-sm-offset-3">
     <p>This page is only a brief summary. To read an in-depth discussion about the project,
       please visit the article on <a href="https://medium.com/@lemurwin/springboard-capstone-project-f6c48f2ce897">Medium.com</a>.
   </div>
 </div>
+</div>
 
-      <footer style="padding-top:25px">
-      <div class="container-fluid text-center">
-
-        <div class="container-fluid bg-5 text-center">
-          <div class="row">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-4" style="border-top:1px solid #222">
-            <div class="col-xs-4" style="padding-top:15px;">
-              <p><a href="https://www.linkedin.com/in/miles-merwin-08a718bb/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></p></div>
-            <div class="col-xs-4" style="padding-top:15px;">
-              <p><a href="https://www.facebook.com/merwin.miles" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></p></div>
-            <div class="col-xs-4" style="padding-top:15px;">
-              <p><a href="https://www.github.com/lemurwin" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i></a></p></div>
-            </div>
-          </div>
-
-        <div class="row" style="padding-top:10px">
-          <div class="col-sm-3"></div>
-          <div class="col-sm-6" ><p style="color:black;">&copy;Miles Merwin 2017</p></div>
-
-
+<footer>
+    <div class="container-fluid bg-5 text-center">
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-4" style="border-top:1px solid #222">
+              <div class="col-xs-4">
+                <p><a href="https://www.linkedin.com/in/miles-merwin-08a718bb/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></p></div>
+              <div class="col-xs-4" >
+                <p><a href="https://www.facebook.com/merwin.miles" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></p></div>
+              <div class="col-xs-4">
+                <p><a href="https://www.github.com/lemurwin" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i></a></p></div>
         </div>
       </div>
-      </footer>
+
+
+      <div class="row" style="padding-top:10px">
+        <div class="col-sm-6 col-sm-offset-3" ><p style="color:black;">&copy;Miles Merwin 2017</p></div>
+      </div>
+  </div>
+</footer>
 
 
 
