@@ -7,12 +7,28 @@ $(document).ready(function(){
     $('.prjimg').hover(function(){
       $(this).siblings('div').fadeIn();
     });
-    
+
     $('.cardinfo').mouseleave(function(){
       $('.cardinfo').fadeOut();
       });
 
-  };
+      $( "#new" ).mouseenter(function() {
+        $( "#new" ).animate({
+              color: "white",
+              backgroundColor: "#00911a",
+              outlineColor: "white"
+          });
+        });
+        $('#new').mouseleave(function(){
+          $('#new').animate({
+            color:"#333",
+            backgroundColor:"white",
+
+
+          })
+        })
+    };
+
 
 
 

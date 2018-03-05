@@ -113,7 +113,33 @@ nav{
   font-weight:lighter;
   margin-top:15px;
 }
+.subheading3{
+  background-color:#00911a;
+  color:white;
+  padding-top:5px;
+  padding-bottom:10px;
+  font-weight:lighter;
+  margin-top:15px;
+}
+.subheadingextra{
 
+  color: black;
+  padding-bottom:10px;
+  font-weight:regular;
+
+}
+.subheadingextra > a{
+  color:#333;
+  transition: color 0.75s;
+}
+a{
+  color:#333;
+  text-decoration: none;
+}
+.subheadingextra >a:hover{
+  text-decoration:none;
+  color:#00911a;
+}
 p{
   margin-top:10px;
   margin-bottom:10px;
@@ -133,7 +159,7 @@ footer .col-xs-4{
     font-size:130%;
   }
   footer p{
-    font-size:100%;
+    font-size:120%;
   }
 }
 @media only screen and (max-width:768px){
@@ -142,7 +168,7 @@ footer .col-xs-4{
     font-size:120%;
   }
   footer p{
-    font-size:100%;
+    font-size:120%;
   }
 
   .cardinfo {
