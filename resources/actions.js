@@ -1,5 +1,5 @@
 $(document).ready(function(){
-$("#posterCarousel").carousel("pause");
+
 
   if ($(window).width() > 769){
     $('.cardinfo').hide();
