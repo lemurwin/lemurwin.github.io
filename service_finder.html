@@ -26,6 +26,9 @@
 <script src="./resources/actions.js"></script>
 
 <style>
+.carousel-indicators .active{
+  background-color: #333;
+}
 </style>
 </head>
 
@@ -73,13 +76,13 @@
   <div class="container">
 
     <div class="row" style="margin-bottom:10px;">
-      <div class="col-md-offset-1 col-md-5"><a href="./sideprojects.html">Other Projects</a> > <a href="#">Airsoft Tracker</a></div></div>
+      <div class="col-md-offset-1 col-md-5"><a href="./sideprojects.html">Other Projects</a> > <a href="#">Service Finder Design Challenge</a></div></div>
       <div class="row" >
       <div class="col-md-4 col-md-offset-1"><a href="./sideprojects.html"style="font-size:24px; text-decoration:none">< Back</a></div></div>
       <div class="row">
-      <div class="col-md-8 col-md-offset-2" ><h1 id="top">Airsoft Tracker WebApp</h1>
+      <div class="col-md-8 col-md-offset-2" ><h1 id="top">Service Finder Design Challenge</h1>
 
-          <p>Messing around with Firebase</p>
+          <p>A 6-Hour Design Proposal for Automotive Yelp </p>
       </div>
 
     </div>
@@ -88,37 +91,49 @@
   <div class="container">
     <div class="row">
 
-        <div class="col-md-8 col-md-offset-2">
-          <h2>Some Background</h2>
+        <div class="col-md-8 col-md-offset-2 ">
+          <h2>Up to the Challenge</h2>
           </div>
     </div>
     <div class="row">
 
         <div class="col-md-6 col-md-offset-3 ">
-          <p>One of my pasttimes is playing a game similar to paintball, sort of like
-            real life videogames. However, unlike videogames, there's no scoreboard to
-            compare with previous games or even your friends.</p>
-          <p>My solution to this was to develop a website that my friends and I could access via
-            phone so we could have a little bit of friendly competition.</p>
-          <p>The app needed to fit on a single page, count kills and deaths, attribute that a user, and be able
-            to submit the data to a database. It also had to be clearly visible in the dark
-            without ruining my night vision. </p>
-            <iframe src="https://drive.google.com/file/d/1VcfGD9Ppd7ZdBOAdYw2ZZF9oVOLasUns/preview" width="100%" height="480"></iframe>
-            <div class="text-center"><h5>Iterations of the UI in Sketch</h5></div>
-            <p>Using Sketch, I made some mockups based on a pencil drawing I drew up. I subsequently
-              wrote up the HTML and JavaScript, and from there began work on adding Firebase
-              support so I could push and pull data during a game.</p>
+          <p>As part of the interview process for a startup, I was given the challenge
+          to create a UI for desktop and mobile that would serve as the access point to
+          finding automotive service, much in the way Yelp finds restaurants.
+          </p>
+          <p>The requirements for the app were as follows:</p>
+            <ul>
+            <li>Customer is looking for getting his car repaired within the vicinity of 10
+               - 15 miles radius (this can be customized by the customer).</li>
+            <li>The screen shows all the auto services willing to accept may be in the background </li>
+            <li>Filters out the kind of service (say oil change, brakes, tires, transmission fluid, etc)
+              that he is interested in, only those shops display with their ratings, approx estimate and coupons (if valid)</li>
+            <li>Customer may choose any of the autoshop he is interested in.
+              Upon opting any one of the autoshop, another screen or may be within
+              the home screen, a short screen pops up with the auto shop profile.</li>
+            <li>Customer can call / sms / text / video chat with the autoshop and
+              provide more text details about the job or optionally upload car pic / video.</li>
+            </ul>
             <p>
-            <p>I wanted a no-frills application, so I refrained from any fancy styling, and went for
-              function over form. The selector dropdown is large so that it is easily visible
-              even when you're wearing goggles. The kill button is large so that it's the most
-              likely to be pressed button if you're trying to log points on the fly, while the death/respawn
-              button is much narrower, as the user will have more time to add this value when they're walking
-              back to base. Game data is all visible at the bottom so there is no confusion when you finally
-              decide to submit your score to the database.</p>
-              <p>Check out the demo below - it's taking data from a duplicate database, so you can mess around
-                with the information without worry!</p>
-                <iframe src='https://lemurwin.github.io/airsoft-demo' height='480px' width="100%"></iframe>
+            I began by analyzing other service-finding platforms like Google Maps/Business
+            and Yelp, and thinking about what made them useful. I liked the ratings sytem for
+            both platforms, and both behaved similarly when using the map function to find
+            businesses.</p>
+            <img src="./resources/service_finder/paper_proto.jpg" width="100%" style="border: 1px solid grey"/>
+            <h5 class="text-center">Paper &amp; Pencil Wireframe</h5>
+            <p>I tried to emphasize simplicity in my design, as I know that servicing one's
+              car is a trial in itself, so whatever the platform offered needed to be straightforward
+              and simple. I took what I found and drew up some paper wireframes. Once I had
+              a feel for what I needed to build, I mocked up my concepts with Sketch.</p>
+              <iframe src="https://drive.google.com/file/d/1Gftm9Al5x8zEDgnH1kAoL1heWRbeIJR0/preview" width="100%" height="480"></iframe>
+            <p>For my final design, I made both mobile and desktop illustrations, drawing from Google Maps and Yelp as inspirations.</p>
+              <p>I didn't win the challenge, but I gained the valuable experience of more heuristic
+              analysis, tight design deadlines, and building applications for different sized screens.</p>
+
+
+
+
           </div>
     </div>
 
