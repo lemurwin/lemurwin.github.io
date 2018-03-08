@@ -78,6 +78,11 @@ nav{
   height:30px;
   font-size: 12px;
 }
+#icons{
+  color:white;
+  padding-top:5px;
+  padding-bottom:5px;
+}
 
 .fullscreen {
   position: fixed;
@@ -126,6 +131,7 @@ nav{
   color: black;
   padding-bottom:10px;
   font-weight:regular;
+  
 
 }
 .subheadingextra > a{
