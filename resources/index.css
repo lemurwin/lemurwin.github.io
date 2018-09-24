@@ -131,7 +131,7 @@ nav{
   color: black;
   padding-bottom:10px;
   font-weight:regular;
-  
+
 
 }
 .subheadingextra > a{
@@ -158,6 +158,12 @@ footer a{
 }
 footer .col-xs-4{
   padding-top: 15px;
+}
+.carousel-indicators li{
+  border:1px solid #333;
+}
+.carousel-indicators .active {
+  background-color:#333;
 }
 
 @media only screen and (min-width:769px) {
