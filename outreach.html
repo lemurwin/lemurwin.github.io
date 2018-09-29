@@ -1,0 +1,455 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Portfolio of Miles Merwin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,700" rel="stylesheet">
+
+<script src="https://use.fontawesome.com/fbbc7a65d4.js"></script>
+<link rel="stylesheet" href="./resources/index.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112231542-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112231542-1');
+</script>
+
+
+<style>
+</style>
+</head>
+
+
+  <body>
+    <div class="container">
+              <nav class="navbar navbar-default" role="navigation">
+                  <div class="container">
+                     <div class="navbar-header">
+                         <a class="navbar-brand" href="./index.html" style="font-size:2em; color:grey;">Miles Merwin</a>
+                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                          </button>
+                    </div>
+
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li class="dropdown active">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="./billygoat">Billy Goat Digital</a></li>
+                  <li><a href="./meetup.html">Meetup Case Study</a></li>
+                  <li><a href="./wiad.html">World IA Day</a></li>
+                  <li class="active"><a href="./outreach.html">Outreach</a></li>
+                  <li><a href="./angelicsoftware.html">Angelic Software</a></li>
+                  <li><a href="./pandora.html">Pandora UI Redesign</a></li>
+                  <li><a href="./sideprojects.html">Side Projects</a></li>
+                </ul>
+          </li>
+
+
+        </ul>
+        </div>
+      </div>
+   </nav>
+  </div>
+
+
+
+  <div class="container">
+    <div class="row subheading1" style="margin-bottom:10px;background-color:#dc3545">
+
+      <div class="col-md-8 col-md-offset-2 " ><h1 id="top">Outreach Product And Checkout Revision</h1>
+
+          <p>Improving the Shopping Experience</p>
+      </div>
+
+    </div>
+  </div>
+
+
+
+    <div class="container">
+      <div class="row">
+
+          <div class="col-md-8 col-md-offset-2 ">
+            <h2>Introduction</h2>
+            </div>
+        </div>
+
+
+      <div class="row">
+
+        <div class="col-md-6 col-md-offset-3">
+          <p>Outreach is an organization dedicated to helping church organizations reach
+          their constituents. They provide postcards, banners, posters, movies, etc. to
+          reach out to congregations.<br><br>
+          I worked on this as a 2 week contract to redesign the
+          product pages for Postcards, design a mobile friendly menu, and make the
+          checkout process mobile friendly.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 ">
+            <h2 id="heuristics">Discovery</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <p>Navigating to <a href="https://www.outreach.com/" target="_blank">Outreach.com</a> is
+            an overload, reminicent of mailers from the local grocery store. There
+            are redundancies on the home page and the navigational experience
+            is inconsistent.
+            </p>
+            <p>Matters become worse once you visit on mobile, as some aspects of the site
+            were developed for mobile screen sizes, but the amount of information remained
+            the same, creating huge menus that were impossible to navigate.</p>
+
+                      </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
+
+          <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="8000" style="margin-top:15px; margin-bottom:15px">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel" data-slide-to="1"></li>
+
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                      <div class="item active text-center">
+                        <img src="./resources/outreach/menu2.png" alt="Portal Draft" width="100%" />
+                      </div>
+
+                      <div class="item">
+                        <img src="./resources/outreach/menu1.png" alt="Ad Generator Draft"width="100%" />
+                      </div>
+
+
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#carousel" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                  <h5>Enormous Menus</h5>
+                </div>
+              </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 ">
+              <h2 id="Brainstorming">Heuristic Analysis</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <p>What I discovered from analyzing the website is that there was no
+                standard user flow. When you navigate to postcards vs. banners, for example,
+                you actually reach different looking portals.
+
+            <br><br>
+              Additionally, some items would navigate you to a page that you were expecting,
+              like link claiming "standard postcards" that brings you
+              to a page that lets you create <em>custom</em> postcards.
+            <br><br>
+              Another quirk is found in the checkout, where the drop down for a different
+              shipping option takes mor than  3 seconds to generate, and then when you select a different
+              shipping option, it reloads the whole shopping cart, taking another 3 seconds
+              to load, simply to update your cart subtotal.</p>
+
+
+            </div>
+        </div>
+
+          <div class="row text-center">
+            <div class="col-md-8 col-md-offset-2">
+                <a href="./resources/page_one.png" target="_blank"><img src="./resources/page_one_preview.png" width="100%" style="border:1px solid #999"/></a>
+                <h5>Heuristic Analysis Details</h5>
+              </div>
+          </div>
+
+
+
+
+
+
+
+
+
+      <div class="row">
+            <div class="col-md-8 col-md-offset-2 ">
+              <h2>Information Architecture</h2>
+            </div>
+
+      </div>
+
+
+      <div class="row">
+          <div class="col-md-6 col-md-offset-3" >
+            <p>To change the menu, I catalogued every subheading and categorized them
+              into larger groups, reducing navigation menu size from 12 top-level categories
+              down to 5, and the footer menu from 16 items to 11.</p>
+            </div>
+        </div>
+
+        <div class="row">
+
+
+          <div class ="col-md-10 col-md-offset-1 text-center">
+          <div id="carousel1" class="carousel slide" data-ride="carousel" data-interval="8000">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators test1">
+                        <li data-target="#carousel1" data-slide-to="0" class="active" ></li>
+                        <li data-target="#carousel1" data-slide-to="1" ></li>
+
+
+                      </ol>
+
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner">
+                        <div class="item active">
+                          <img src="./resources/outreach/combined_before.png" alt="Combined Before Website">
+                          <div class="carousel-caption d-none d-md-block" style="background-color:rgba(120, 120, 120, .7); border-radius:15px;">
+                            <h5><strong>Header and Footer Pre Redesign</strong></h5>
+                          </div>
+
+                        </div>
+
+                        <div class="item">
+                          <img src="./resources/outreach/combined_after.png" alt="Combined After Mobile">
+                          <div class="carousel-caption d-none d-md-block"style="background-color:rgba(120, 120, 120, .7); border-radius:15px;">
+                            <h5><strong>Header and Footer Mobile</strong></h5>
+                          </div>
+                        </div>
+
+
+
+
+                      </div>
+
+                      <!-- Left and right controls -->
+                      <a class="left carousel-control" href="#carousel1" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#carousel1" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+
+
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h2>Checkout User Flow</h2>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <p>As mentioned above, the checkout flow is very resource intensive and
+              required reloading the page every time you choose a new shipping option.</p>
+            <p>A simple workaround for this was to offer flat-rate shipping, reducing time between choosing an item
+              and purchasing it, because a frictionless checkout is key to increase checkout conversion rates.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <div id="carousel2" class="carousel slide" data-ride="carousel" data-interval="8000">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                          <li data-target="#carousel2" data-slide-to="0" class="active" ></li>
+                          <li data-target="#carousel2" data-slide-to="1" ></li>
+                          <li data-target="#carousel2" data-slide-to="2" ></li>
+                          <li data-target="#carousel2" data-slide-to="3" ></li>
+                          <li data-target="#carousel2" data-slide-to="4" ></li>
+                          <li data-target="#carousel2" data-slide-to="5" ></li>
+
+
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+
+                          <div class="item active">
+                            <img src="./resources/outreach/checkout/1.png" alt="Signed In checkout">
+                          </div>
+
+                          <div class="item">
+                            <img src="./resources/outreach/checkout/2.png" alt="Signed In Address">
+                          </div>
+
+                          <div class="item ">
+                            <img src="./resources/outreach/checkout/3.png" alt="Choose Shipping">
+                          </div>
+
+                          <div class="item ">
+                            <img src="./resources/outreach/checkout/4.png" alt="Signed In Payment">
+                          </div>
+
+                          <div class="item ">
+                            <img src="./resources/outreach/checkout/5.png" alt="Confirm Order">
+                          </div>
+
+                          <div class="item ">
+                            <img src="./resources/outreach/checkout/6.png" alt="Invoice">
+                          </div>
+
+
+
+
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#carousel2" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel2" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+
+
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+</div><!-- Container End -->
+<div id="projects" class="container" >
+
+  <div class="row text-center"style="margin-top:50px;">
+
+    <div class="col-md-10 col-md-offset-1">
+
+      <div class="row text-center">
+        <div class="col-md-12">
+              <a href="./billygoat.html">
+                <div class="col-xs-4 expand-nav1" style="background-color:#1f1f51; color:white;">
+                  <div><p>Billy Goat Group</p></div>
+                </div>
+              </a>
+              <a href="./meetup.html">
+                <div class="col-xs-4 expand-nav1" style=" background-color:#ed1c40; color:white;">
+                  <div><p>Meetup</p></div>
+                </div>
+              </a>
+              <a href="./wiad.html">
+                <div class="col-xs-4 expand-nav1"style="background-color:#00911a; color:white;">
+                  <div><p>World IA Day</p></div>
+                </div>
+              </a>
+
+
+          </div>
+      </div>
+
+
+      <div class="row text-center">
+
+        <div class="col-md-12">
+
+          <a href="#">
+            <div class="col-xs-4 expand-nav1"style="background-color:#dc3545; color:white;">
+              <div><p>Outreach</p></div>
+            </div>
+          </a>
+
+          <a href="./pandora.html">
+            <div class="col-xs-4 expand-nav1" style="background-color:#386aff; color:white;">
+              <div><p>Pandora</p></div>
+            </div>
+          </a>
+          <a href="./angelicsoftware.html">
+            <div class="col-xs-4 expand-nav1" style=" background-color:#D95B00; color:white;">
+              <div><p>ReIgnyte</p></div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+      <div class="row text-center">
+
+        <div class="col-md-12">
+          <a href="./about.html">
+            <div class="col-xs-12 expand-nav1" style=" background-color:grey; color:white;">
+              <div><p>About Me</p></div>
+            </div>
+          </a>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<footer>
+    <div class="container bg-5 text-center">
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-4" style="border-top:1px solid #222">
+              <div class="col-xs-4">
+                <p><a href="https://www.linkedin.com/in/miles-merwin-08a718bb/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></p></div>
+              <div class="col-xs-4" >
+                <p><a href="https://www.facebook.com/merwin.miles" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></p></div>
+              <div class="col-xs-4">
+                <p><a href="https://www.github.com/lemurwin" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i></a></p></div>
+        </div>
+      </div>
+
+
+      <div class="row" style="padding-top:10px">
+        <div class="col-sm-6 col-sm-offset-3" ><p style="color:black;">&copy;Miles Merwin 2017</p></div>
+      </div>
+  </div>
+</footer>
+
+
+  </body>
