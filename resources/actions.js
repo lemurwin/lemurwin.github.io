@@ -29,8 +29,26 @@ $(document).ready(function(){
         })
     };
 
+const socialProfiles={
+  Facebook:{
+        link: 'https://www.facebook.com/merwin.miles',
+        image: 'fa fa-facebook'},
+  LinkedIn:{
+        link:'https://www.linkedin.com/in/miles-merwin-08a718bb/',
+        image: 'fa fa-linkedin'},
+  GitHub:{
+        link: 'https://www.github.com/lemurwin',
+        image: 'fa fa-github-alt'}
+  };
 
-
+const divBegin = '<a href="';
+const divSpec = '"><div class="col-xs-4"><p><i class="';
+const divEnd= '" aria-hidden="true"></i></p></div></a>'
+$.each(socialProfiles, function(key, value){
+  $('#footer').append(divBegin + value.link + divSpec + value.image + divEnd);
+});
+const currentYear = (new Date).getFullYear();
+$('#footer').append('<div class="row" style="padding-top:10px"><div class="col-sm-6 col-sm-offset-3" ><p style="color:black;">&copy;Miles Merwin '+ currentYear +'</p></div></div>')
 
 
   $('#fun').click(function(){

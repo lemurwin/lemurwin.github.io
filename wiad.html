@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,700" rel="stylesheet">
 
 <script src="https://use.fontawesome.com/fbbc7a65d4.js"></script>
+<script src="./resources/actions.js"></script>
 <link rel="stylesheet" href="./resources/index.css">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112231542-1"></script>
@@ -53,12 +54,9 @@
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="./billygoat.html">Billy Goat Digital</a></li>
                   <li><a href="./meetup.html">Meetup Case Study</a></li>
                   <li class="active"><a href="./wiad.html">World IA Day</a></li>
                   <li><a href="./outreach.html">Outreach</a></li>
-                  <li><a href="./angelicsoftware.html">Angelic Software</a></li>
-                  <li><a href="./pandora.html">Pandora UI Redesign</a></li>
                   <li><a href="./sideprojects.html">Side Projects</a></li>
                 </ul>
           </li>
@@ -73,9 +71,9 @@
 
 
   <div class="container">
-    <div class="row subheading1" style="margin-bottom:10px;background-color:#00911a">
+    <div class="row subheading1" style="margin-bottom:10px;background-color:#00aeef">
 
-      <div class="col-md-8 col-md-offset-2 " ><h1 id="top">WIAD Event Page Redesign</h1>
+      <div class="col-md-6 col-md-offset-3 " ><h1 id="top">World Information Architecture Day Redesign</h1>
 
           <p>Bringing Everything Together</p>
       </div>
@@ -86,73 +84,72 @@
 
 
     <div class="container">
-      <div class="row">
 
-          <div class="col-md-8 col-md-offset-2 ">
-            <h2>Introduction</h2>
-            </div>
-        </div>
 
 
       <div class="row">
 
         <div class="col-md-6 col-md-offset-3">
-          <p><a href="http://ladiadesign.co/about">LA DIA</a> is a Los Angeles based design agency working to promote equity
-          through design. We worked on a project
-          for the international World Information Architcture Day event that is
-          hosted every year.<br><br>The project was to develop a website that
-          would provide access to all previous years' content while also showing
-          the current year's venue information.</p>
+          <h2>Introduction</h2>
+          <p>As any collector knows, there's a point at which all your things begin to get lost in the clutter.
+            World Information Architecture Day (<strong>WIAD</strong>) is an yearly celebration of Information Architecture,
+            and accordingly has an extensive amount of collected materials. As part of the LA DIA team, I designed
+            a website to unify and display previous years' content.</p>
+
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2 ">
-            <h2 id="heuristics">Discovery</h2>
-          </div>
-        </div>
+
 
         <div class="row">
 
 
           <div class="col-md-6 col-md-offset-3">
-            <p>Over the course of 6 months, I met remotely with 8 other information
-            architects and designers to breathe life into the project. We held sketch sprints
-            to generate ideas for the homepage and voted on features that we liked, and
-            assigned feature pages to individuals to break up the tasks.<br><br>
-            I was assigned <em>talk</em> pages: the pages for
+            <h2 id="heuristics">Discovery</h2>
+            <p>Over the course of 6 months, I met remotely with 8 other designers to breathe life into the project. Our prime objective
+              was to figure out the best way to sort and present different topics while maintaining
+              the functionality of the location-specific event pages.
+              <br>
+              <br>
+               To get a rough sense of what we needed to accomplish, we held sketching sprints
+            to generate ideas for the homepage and voted on features, subsequently
+            assigning specific feature pages to individual designers.<br><br>
+            I was responsible for the <em>talk</em> pages: the pages for
             displaying specific talks and topics.</p>
           </div>
         </div>
 
 
 
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 ">
-              <h2 id="Brainstorming">Do your homework!</h2>
-            </div>
-        </div>
+
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
+              <h2 id="Brainstorming">Do your homework!</h2>
               <p>There are many awesome platforms for viewing content online: Youtube,
               Vimeo, Lynda, and TED, to name a few. I wanted the WIAD experience to focus on education,
               like Lynda and TED, and incorporate their best features.
 
             <br><br>
               Specifically, Lynda has a great scrolling transcript feature where the user can
-              click on paragraphs and the video will jump to match the transcript. I also
-              wanted to integrate a way to view the presentation deck simultaneously with the corresponding video.
-            <br><br>
+              click on individual sentences and the video will jump to match the transcript. I also
+              wanted to integrate a way to view the presentation deck simultaneously with the corresponding video.</p>
+              <img src="./resources/wiad/resources/lynda.png" width=100% style="border: 1px solid lightgrey;">
+              <h5 class="text-center">Lynda Scrolling Transcript</h5>
+            <br>
+            <p>
               I also like how TED has a Speaker subsection that has other talks
               by the same person, as well as related topics in the sidebar, making it
-              incredibly easy to find related topics or drill down on specific topics.
-              <br><br>
-              With these elements in mind, I used Sketch to build some wireframes for
-            the development team to work with.</p>
+              incredibly easy to find related topics or drill down on specific topics.</p>
+              <img src="./resources/wiad/resources/ted.png" width="100%" style="border: 1px solid lightgrey;">
+              <h5 class="text-center">Ted Author Navigation</h5>
+              <br>
+              <p>Once I had decided on the most relevent features, I set to work mocking up the designs
+                as Sketch documents to send the developers as a guideline. Because of the tight timeline, we were only allowed
+                enough time for one iteration.</p>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-6 col-md-offset-3">
 
               <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="8000" style="margin-top:15px; margin-bottom:15px">
                           <!-- Indicators -->
@@ -189,52 +186,33 @@
                             <span class="sr-only">Next</span>
                           </a>
                         </div>
+                        <h5 class="text-center">Wireframes for Various Talk Page Functions</h5>
                       </div>
                     </div>
           <div class="row">
             <div class="col-md-6 col-md-offset-3">
 
-              <p>These wireframes ultimately went to the site developers and were
-                implemented before the project ran out of money, as it seems the case
-                is for non-profit projects.
-              </p>
 
               </div>
             </div>
 
+        <div class="row">
+              <div class="col-md-6 col-md-offset-3 ">
+                <h2>Final Thoughts and Products</h2>
 
 
+              </div>
 
-
-
-      <div class="row">
-            <div class="col-md-6 col-md-offset-3 ">
-              <h2>Final Products</h2>
-              <p>
-            </div>
-
-      </div>
-
-
-      <div class="row">
-          <div class="col-md-8 col-md-offset-2 text-center" style="margin-bottom:20px;">
-            <img src="./resources/wiad/final/comparison.png" width=100% style='border: 1px solid black'/>
-            <h5>Draft vs. Final</h5>
-            </div>
         </div>
 
         <div class="row">
-
-
-          <div class ="col-md-10 col-md-offset-1 text-center">
+          <div class ="col-md-6 col-md-offset-3 text-center">
           <div id="carousel1" class="carousel slide" data-ride="carousel" data-interval="8000">
                       <!-- Indicators -->
                       <ol class="carousel-indicators">
                         <li data-target="#carousel1" data-slide-to="0" class="active"></li>
                         <li data-target="#carousel1" data-slide-to="1" ></li>
                         <li data-target="#carousel1" data-slide-to="2" ></li>
-
-
                       </ol>
 
                       <!-- Wrapper for slides -->
@@ -268,18 +246,15 @@
                       </a>
                     </div>
 
-                      <div><h5>Talk Pages</h5></div>
+                      <div><h5>Production Talk Pages</h5></div>
           </div>
 
         </div>
-
-
-
-
-
-
-
-
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3"><p> Overall, the look of the website is clean, without distraction, and easily navigable.
+              However, to truly ensure the the efficacy of design, the process could have used more iterations and testing.
+            </div>
+        </div>
 
 </div><!-- Container End -->
 <div id="projects" class="container" >
@@ -290,50 +265,28 @@
 
       <div class="row text-center">
         <div class="col-md-12">
-              <a href="./billygoat.html">
-                <div class="col-xs-4 expand-nav1" style="background-color:#1f1f51; color:white;">
-                  <div><p>Billy Goat Group</p></div>
-                </div>
-              </a>
+
               <a href="./meetup.html">
                 <div class="col-xs-4 expand-nav1" style=" background-color:#ed1c40; color:white;">
                   <div><p>Meetup</p></div>
                 </div>
               </a>
               <a href="#">
-                <div class="col-xs-4 expand-nav1"style="background-color:#00911a; color:white;">
+                <div class="col-xs-4 expand-nav1"style="background-color:#00aeef; color:white;">
                   <div><p>World IA Day</p></div>
                 </div>
               </a>
-
+              <a href="./outreach.html">
+                <div class="col-xs-4 expand-nav1"style="background-color:#dc3545; color:white;">
+                  <div><p>Outreach</p></div>
+                </div>
+              </a>
 
           </div>
       </div>
 
 
-      <div class="row text-center">
 
-        <div class="col-md-12">
-
-          <a href="./outreach.html">
-            <div class="col-xs-4 expand-nav1"style="background-color:#dc3545; color:white;">
-              <div><p>Outreach</p></div>
-            </div>
-          </a>
-
-          <a href="./pandora.html">
-            <div class="col-xs-4 expand-nav1" style="background-color:#386aff; color:white;">
-              <div><p>Pandora</p></div>
-            </div>
-          </a>
-          <a href="./angelicsoftware.html">
-            <div class="col-xs-4 expand-nav1" style=" background-color:#D95B00; color:white;">
-              <div><p>ReIgnyte</p></div>
-            </div>
-          </a>
-
-        </div>
-      </div>
       <div class="row text-center">
 
         <div class="col-md-12">
