@@ -176,8 +176,7 @@ footer .col-xs-4{
 border-radius: 2px;
   transition: transform .3s;
   opacity: .65;
-
-  box-shadow: 7px 7px 5px #BEBEBE;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .expand-nav:hover{
@@ -188,14 +187,14 @@ border-radius: 2px;
   transform:scale(1.1);
   top:100%;
   opacity:1;
-  box-shadow: 13px 13px 10px #BEBEBE;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 .expand-nav:active{
 border-radius: 2px;
   transition: transform .1s;
   transform:scale(.95);
-  opacity: .65;
-  box-shadow: 10px 10px 5px #BEBEBE;
+  opacity: .85;
+  box-shadow: 0 0px 0px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 
@@ -219,7 +218,7 @@ border-radius: 2px;
 border-radius: 2px;
   transition: transform .1s;
   transform:scale(.95);
-  opacity: .65;
+  opacity: .85;
 }
 .linkout{
   transition: transform .3s;

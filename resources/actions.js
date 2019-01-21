@@ -9,7 +9,7 @@ $(document).ready(function(){
     });
 
     $('.cardinfo').mouseleave(function(){
-      $('.cardinfo').fadeOut();
+      $('.cardinfo').fadeOut(250);
       });
 
       $( "#new" ).mouseenter(function() {
