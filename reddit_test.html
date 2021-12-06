@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap" rel="stylesheet">    
+</head>
+<style>
+    body{
+        margin:0px;
+    }
+    body::-webkit-scrollbar{
+        display:none;
+    }
+    #app{
+        display:flex;
+        flex-wrap:wrap;
+        background-color:black;
+    }
+    .square{
+        width:100%;
+        height:100vh;
+        object-fit:contain;
+    }
+    #fullscreen{
+        background-color:black;
+        overflow:hidden;
+    }
+    #fullscreen, #bg1, #bg2{
+        position:absolute;
+        width:100%;
+        height:100%;
+        display:none;
+
+    }
+
+    #bg1, #bg2{
+        display:none;
+        object-fit:contain;
+        transform:scale(1.1);
+    }
+
+    #photo_info{
+        position:absolute;
+        bottom: 10px;
+        left:10px;
+        color:white!important;
+        z-index: 3;
+        font-family: Montserrat;
+    }
+    h1{
+        font-weight:500;
+        margin:0;
+        padding:0;
+    }
+    p{
+        font-weight:200;
+        margin:0;
+        padding:0;
+    }
+    a{
+        color:white;
+    }
+    #selectors{
+        position:absolute;
+        width:100%;
+        height:100%;
+        
+
+    }
+    #input_container{
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform:translatex(-50%);
+        width:fit-content;
+        padding:20px;
+        text-align:center;
+    }
+    #url{
+        width: 30%;margin:auto;}
+    #submit{
+        width:100px;
+    }
+    
+    
+</style>
+<body>
+    <div id="selectors">
+        <div id="input_container">
+            <h1>Enter the url of the subreddit (or multireddit) you want to view.</h1>
+            <input type="text" name="url" id="url">
+            <select name="quantity" id="quantity">
+                <option value="100">100</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="75">75</option>
+                
+            </select>
+            <input type="button" value="Submit" id="submit">
+            
+        </div>
+        
+    </div>
+    <div id="fullscreen">
+        <div id="photo_info">
+            <h1 id="title"></h1>
+            <p id="info"></p>
+
+        </div>
+        <img src="" alt="" id="bg1">
+        <img src="" alt="" id="bg2">
+    </div>
+    <!-- <div id="app"></div> -->
+    <script>
+    //    Subreddits:
+    //  https://www.reddit.com/r/classysexy/.json?limit=100
+    // 
+    // 
+    $(document).ready(function(){
+                $("body").keydown(function(e){
+                    if(e.keyCode === 39 || e.keyCode === 37){
+                       
+                        imageChanger();
+                    }
+
+                    if (e.keyCode === 40){
+                        avoidIndex.push(lastIndex);
+                        console.log(avoidIndex);
+                        imageChanger();
+                    }
+
+                    if (e.keyCode === 13 && url === null){
+                        url = $('#url').val();
+                        quantity = $('#quantity').val();
+                        console.log(url, quantity);
+                        redditCall();
+                    }
+                });
+
+                $('#submit').click(function(){
+                        url = $('#url').val();
+                        quantity = $('#quantity').val();
+                        console.log(url, quantity);
+                        redditCall();
+                });
+  
+
+        let url = null;
+        let quantity = null;
+        let displayImages = [];
+        let viewobj;
+        let firstImage = true;
+        let afterPageIndex = "";
+        let afterPageCall="";
+        let lastIndex = null;
+        let avoidIndex = [];
+
+        function imageChanger(imageIndex=null){
+            let index;
+            
+            if (imageIndex === null){
+                index = Math.floor(Math.random()* displayImages.length);
+                console.log(index);
+            } else{
+                index = imageIndex;
+            }
+            
+
+            while (avoidIndex.includes(index)){
+                index = Math.floor(Math.random()* displayImages.length);
+            }
+            if (firstImage === true){
+                $('#bg1').attr('src', displayImages[index].url);
+                $('#bg1').fadeIn(2000);
+                $('#bg1').css("z-index", "1")
+                $('#bg2').fadeOut(2000);
+                $('#bg2').css("z-index", "0");
+                
+                firstImage = false;
+            } else{
+                $('#bg2').attr('src', displayImages[index].url);
+                $('#bg2').fadeIn(2000);
+                $('#bg2').css("z-index", "1")
+                $('#bg1').fadeOut(2000);
+                
+                $('#bg1').css("z-index", "0");
+                
+                firstImage = true;
+            };
+            $('#title').html(displayImages[index].title);
+            $('#info').html("<a href='https://www.reddit.com/r/"+displayImages[index].subreddit+"' target='_blank'>r/" + displayImages[index].subreddit);
+                lastIndex = index;
+        };
+            function imageChangeTimer(){
+                imageChanger();
+                        setInterval(function(){imageChanger()}, 10000);
+           
+            }
+
+            function renderImages(){     
+                console.log(displayImages.length);
+                for (let i=0; i<displayImages.length;i++){
+                    let appBody = document.getElementById('app');
+                    appBody.innerHTML += "<img src='"+displayImages[i]+"' class='square'>";
+                    
+                }
+            };
+            
+            function fillArray(){
+
+                if (displayImages.length <=quantity){
+                    afterPageCall = "&after="+afterPageIndex;
+                    redditCall();
+                }
+
+                if(displayImages.length >quantity){
+                    imageChangeTimer();
+                    console.log(displayImages);
+                }
+            }
+
+            function redditCall(){
+                var request = new XMLHttpRequest();
+                request.open('GET', url+ '.json?limit='+quantity, true);
+
+                request.onload = function() {
+                    if (request.status >= 200 && request.status < 400) {
+                        // Success!
+                        $('#selectors').fadeOut();
+                        $('#fullscreen').fadeIn();
+                        var data = JSON.parse(request.responseText);
+                        viewobj = data;
+                        var pic_arr = data.data.children;
+                        pic_arr.forEach(element => {
+                            if (element.data.url_overridden_by_dest !== undefined){
+                                let testvar = element.data.url_overridden_by_dest;
+                                if (testvar.includes(".jpg") || testvar.includes(".jpeg") || testvar.includes(".png") ){
+                                    let title = element.data.title;
+                                    let subreddit = element.data.subreddit;
+                                    let pushObj = {
+                                        title: title,
+                                        subreddit: subreddit,
+                                        url: testvar
+                                    }
+                                    displayImages.push(pushObj);
+
+                                }
+                                
+                            }
+                        });
+                        afterPageCallback = data.after;
+                        fillArray();
+                        
+                        // renderImages();
+                    } else {
+                        // We reached our target server, but it returned an error
+
+                    }
+                };
+                
+                request.onerror = function() {
+                // There was a connection error of some sort
+                };
+
+                request.send();
+                
+                
+                
+            };
+
+            
+
+            
+           
+            });
+    </script>
+</body>
+</html>
