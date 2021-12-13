@@ -124,24 +124,41 @@
     // 
     // 
     $(document).ready(function(){
+         
                 $("body").keydown(function(e){
-                    if(e.keyCode === 39 || e.keyCode === 37){
-                       
-                        imageChanger();
-                    }
-
-                    if (e.keyCode === 40){
-                        avoidIndex.push(lastIndex);
-                        console.log(avoidIndex);
-                        imageChanger();
-                    }
 
                     if (e.keyCode === 13 && url === null){
                         url = $('#url').val();
                         quantity = $('#quantity').val();
                         console.log(url, quantity);
                         redditCall();
+                        imageChangeTimer();
+                        $("body").keydown(function(e){
+                    
+                            if(e.keyCode === 39 || e.keyCode === 37){
+                            
+                                imageChanger();
+                            }
+
+                            if (e.keyCode === 40){
+                                avoidIndex.push(lastIndex);
+                                console.log(avoidIndex);
+                                imageChanger();
+                            }
+                            if (e.keyCode === 40){
+                                avoidIndex.push(lastIndex);
+                                console.log(avoidIndex);
+                                imageChanger();
+                            }
+                            if (e.keyCode === 83){
+                                displayImages = shuffle(displayImages);
+                                console.log(displayImages);
+                            }
+
+                        });
                     }
+
+
                 });
 
                 $('#submit').click(function(){
@@ -149,99 +166,192 @@
                         quantity = $('#quantity').val();
                         console.log(url, quantity);
                         redditCall();
+                        imageChangeTimer();
+                        $("body").keydown(function(e){
+                    
+                            if(e.keyCode === 37){
+                                if (mainIndex >=2){
+                                    mainIndex-=2;
+                                    imageChanger();
+                                }
+                                
+                                
+                            }
+                            if(e.keyCode === 39){
+                                
+                                imageChanger();
+                            }
+
+                            if (e.keyCode === 40){
+                                let temp = displayImages.splice(lastIndex, 1);
+
+                                avoidIndex.push(temp);
+                                console.log(avoidIndex);
+                                mainIndex=lastIndex;
+                                imageChanger();
+                            }
+                            
+                            if (e.keyCode === 83){
+                                displayImages = shuffle(displayImages);
+                                mainIndex=0;
+                                console.log(displayImages);
+                                imageChanger();
+                            }
+
+                        });
                 });
+            });
   
 
         let url = null;
         let quantity = null;
+
         let displayImages = [];
+
         let viewobj;
+
         let firstImage = true;
+
         let afterPageIndex = "";
         let afterPageCall="";
+
         let lastIndex = null;
         let avoidIndex = [];
+        let alreadySeen = [];
+        let mainIndex=0;
 
         function imageChanger(imageIndex=null){
             let index;
             
+            //lets you view a specific image for testing
             if (imageIndex === null){
-                index = Math.floor(Math.random()* displayImages.length);
-                console.log(index);
+                index = mainIndex;
             } else{
                 index = imageIndex;
             }
+
             
 
-            while (avoidIndex.includes(index)){
-                index = Math.floor(Math.random()* displayImages.length);
-            }
             if (firstImage === true){
                 $('#bg1').attr('src', displayImages[index].url);
                 $('#bg1').fadeIn(2000);
                 $('#bg1').css("z-index", "1")
                 $('#bg2').fadeOut(2000);
                 $('#bg2').css("z-index", "0");
-                
                 firstImage = false;
             } else{
                 $('#bg2').attr('src', displayImages[index].url);
                 $('#bg2').fadeIn(2000);
                 $('#bg2').css("z-index", "1")
                 $('#bg1').fadeOut(2000);
-                
                 $('#bg1').css("z-index", "0");
                 
                 firstImage = true;
             };
+
+
             $('#title').html(displayImages[index].title);
             $('#info').html("<a href='https://www.reddit.com/r/"+displayImages[index].subreddit+"' target='_blank'>r/" + displayImages[index].subreddit);
                 lastIndex = index;
-        };
-            function imageChangeTimer(){
-                imageChanger();
-                        setInterval(function(){imageChanger()}, 10000);
-           
-            }
-
-            function renderImages(){     
-                console.log(displayImages.length);
-                for (let i=0; i<displayImages.length;i++){
-                    let appBody = document.getElementById('app');
-                    appBody.innerHTML += "<img src='"+displayImages[i]+"' class='square'>";
+                console.log(mainIndex);
+                if(mainIndex >= (displayImages.length - 1)){
                     
+                    mainIndex=0;
+                } else{
+                    mainIndex+=1;
                 }
-            };
-            
-            function fillArray(){
+        };
 
-                if (displayImages.length <=quantity){
-                    afterPageCall = "&after="+afterPageIndex;
-                    redditCall();
-                }
+        function shuffle(array) {
+            var m = array.length, t, i;
 
-                if(displayImages.length >quantity){
-                    imageChangeTimer();
-                    console.log(displayImages);
-                }
+            // While there remain elements to shuffle…
+            while (m) {
+
+                // Pick a remaining element…
+                i = Math.floor(Math.random() * m--);
+
+                // And swap it with the current element.
+                t = array[m];
+                array[m] = array[i];
+                array[i] = t;
             }
 
-            function redditCall(){
+            return array;
+        }
+
+        function imageChangeTimer(){
+            let bool = true;
+            setInterval(checkArrayLength, 1000);
+            function checkArrayLength(){
+                if (bool === true){
+                
+                if (displayImages.length >= quantity){
+                    bool=false;
+                    // displayImages = shuffle(displayImages);
+                    
+                    imageChanger();
+            
+                    setInterval(function(){
+                        imageChanger()
+                    }, 10000);
+                }
+            }
+            }
+            
+            
+        
+        };
+
+        // function renderImages(){     
+        //     console.log(displayImages.length);
+        //     for (let i=0; i<displayImages.length;i++){
+        //         let appBody = document.getElementById('app');
+        //         appBody.innerHTML += "<img src='"+displayImages[i]+"' class='square'>";
+                
+        //     }
+        // };
+            
+        // function fillArray(){
+
+            
+
+        //     if(displayImages.length >quantity){
+        //         imageChangeTimer();
+        //         console.log(displayImages);
+        //     }
+        // }
+        // async function useRedditCall(){
+        //     const result = await redditCall();
+        //     imageChangeTimer();
+        // }
+            
+        function redditCall(){
                 var request = new XMLHttpRequest();
-                request.open('GET', url+ '.json?limit='+quantity, true);
+                let fullUrl = url+ '/.json?limit='+quantity+afterPageCall;
+                // url+ '/top/.json?limit='+quantity+'&t=month&after='+afterPageCall;
+                // "https://reddit.com/user/godofsmiles1/m/tasteful_nudies/top/.json?limit=100&t=all"
+                console.log(quantity);
+                console.log(fullUrl);
+                request.open('GET', fullUrl, true);
 
                 request.onload = function() {
                     if (request.status >= 200 && request.status < 400) {
                         // Success!
                         $('#selectors').fadeOut();
                         $('#fullscreen').fadeIn();
+
                         var data = JSON.parse(request.responseText);
                         viewobj = data;
+
                         var pic_arr = data.data.children;
+
                         pic_arr.forEach(element => {
                             if (element.data.url_overridden_by_dest !== undefined){
                                 let testvar = element.data.url_overridden_by_dest;
-                                if (testvar.includes(".jpg") || testvar.includes(".jpeg") || testvar.includes(".png") ){
+                                
+                                if ( testvar.includes(".jpg") || testvar.includes(".jpeg") || testvar.includes(".png")  ){
+                                   
                                     let title = element.data.title;
                                     let subreddit = element.data.subreddit;
                                     let pushObj = {
@@ -249,19 +359,26 @@
                                         subreddit: subreddit,
                                         url: testvar
                                     }
+                                    
                                     displayImages.push(pushObj);
-
+                                    
                                 }
                                 
                             }
                         });
-                        afterPageCallback = data.after;
-                        fillArray();
                         
-                        // renderImages();
+                        afterPageIndex = data.data.after;
+                        console.log(displayImages);
+                        if (displayImages.length <=quantity){
+                            afterPageCall = "&after="+afterPageIndex;
+                            redditCall();
+                        }
+                        
+                        
+                        
+                        
                     } else {
                         // We reached our target server, but it returned an error
-
                     }
                 };
                 
@@ -279,7 +396,7 @@
 
             
            
-            });
+           
     </script>
 </body>
 </html>
