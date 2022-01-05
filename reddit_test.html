@@ -254,7 +254,7 @@
 
             document.title = displayImages[index].title;
             $('#title').html(displayImages[index].title);
-            $('#info').html("<a href='https://www.reddit.com/r/"+displayImages[index].subreddit+"' target='_blank'>r/" + displayImages[index].subreddit);
+            $('#info').html("<a href="+displayImages[index].permalink+" target='_blank'>r/" + displayImages[index].subreddit);
                 lastIndex = index;
                 console.log(mainIndex);
                 if(mainIndex >= (displayImages.length - 1)){
@@ -357,10 +357,12 @@
                                    
                                     let title = element.data.title;
                                     let subreddit = element.data.subreddit;
+                                    let permalink = element.data.permalink;
                                     let pushObj = {
                                         title: title,
                                         subreddit: subreddit,
-                                        url: testvar
+                                        url: testvar,
+                                        permalink: 'https://reddit.com'+permalink
                                     }
                                     
                                     displayImages.push(pushObj);
