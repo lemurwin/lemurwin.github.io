@@ -23,14 +23,30 @@
   #percent{
     color:red;
   }
-  
+  form{
+    display:flex;
+    flex-direction:column;
+  }
+  label{
+    font-size:0.5em;
+  }
 </style>
 
 <body>
-  <div id="main">Hello World</div>
+  <div id="main">
+    <form action="">
+      <label for="birth">Enter Your Birthday</label>
+      <input type="date" id="birthId" name="birthdate" min="1900-01-01" value="1988-12-11" max= >
+      <button id="submit" onclick=test()>Submit</button>
+    </form>
+    
+  </div>
   <script >
+  birthId.max = new Date().toLocaleDateString('en-us');
+  
   function test(){
-  let myBirthday = new Date("12/11/1988");
+  let birthdayInput = document.querySelector('#birthId').value;
+  let myBirthday = new Date(birthdayInput);
   let myFinalTime = new Date("12/11/2078");
   let currentTime = new Date();
   
@@ -39,13 +55,13 @@
   let timeLived = currentTime.getTime() - myBirthday.getTime();
 
   let percentLived = ((timeLived/lifeTotal)*100).toFixed(2);
-  
+ 
   document.getElementById('main').innerHTML = '<h1>You have lived <span id="percent">' + percentLived + '%</span> of your life.</h1>';
 
 };
 
-test();
-setInterval(test, 10000000)
+// test();
+// setInterval(test, 10000000)
 </script>
 
  <!--
