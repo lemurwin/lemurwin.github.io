@@ -9,9 +9,12 @@
 </head>
 <style>
   html, body {
-  height: 100%;
-  width: 100%;
-}
+    height: 100%;
+    width: 100%;
+  }
+  #main{
+    display:flex;
+  }
 </style>
 
 <body>
@@ -28,7 +31,7 @@
 
   let percentLived = ((timeLived/lifeTotal)*100).toFixed(2);
   
-  document.getElementById('main').innerHTML = 'You have lived ' + percentLived + '% of your life.';
+  document.getElementById('main').innerHTML = '<h1>You have lived <span id="percent">' + percentLived + '%</span> of your life.</h1>';
 
 };
 
