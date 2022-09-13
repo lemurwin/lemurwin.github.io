@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<style>
+  html, body {
+  height: 100%;
+  width: 100%;
+}
+</style>
+
+<body>
+  <div id="main">Hello World</div>
+  <script >
+  function test(){
+  let myBirthday = new Date("12/11/1988");
+  let myFinalTime = new Date("12/11/2078");
+  let currentTime = new Date();
+  
+  let lifeTotal = myFinalTime.getTime() - myBirthday.getTime();
+
+  let timeLived = currentTime.getTime() - myBirthday.getTime();
+
+  let percentLived = ((timeLived/lifeTotal)*100).toFixed(2);
+  
+  document.getElementById('main').innerHTML = 'You have lived ' + percentLived + '% of your life.';
+
+};
+
+test();
+setInterval(test, 10000)
+</script>
+
+ <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  
+</body>
+
+</html>
