@@ -37,6 +37,8 @@
     <form action="">
       <label for="birth">Enter Your Birthday</label>
       <input type="date" id="birthId" name="birthdate" min="1900-01-01" value="1988-12-11" max= >
+      <label for="expectancy"></label>
+      <input type="number" id="expectancy" value="90">
       <button id="submit" onclick=test()>Submit</button>
     </form>
     
@@ -46,8 +48,14 @@
   
   function test(){
   let birthdayInput = document.querySelector('#birthId').value;
+  let expectancy = parseInt(document.querySelector('#expectancy').value);
   let myBirthday = new Date(birthdayInput);
-  let myFinalTime = new Date("12/11/2078");
+
+  let finalYear = myBirthday.getFullYear()+expectancy;
+  let finalDay = myBirthday.getDate()+1;
+  let finalMonth = myBirthday.getMonth()+1;
+  let finalString = finalYear + "-"+finalMonth+"-"+finalDay;
+  let myFinalTime = new Date(finalString);
   let currentTime = new Date();
   
   let lifeTotal = myFinalTime.getTime() - myBirthday.getTime();
