@@ -123,7 +123,7 @@
     <!-- <div id="app"></div> -->
     <script>
     //    Subreddits:
-    //  https://www.reddit.com/r/classysexy/.json?limit=100
+    //  https://api.reddit.com/r/classysexy/.json?limit=100
     // 
     // 
     $(document).ready(function(){
@@ -333,7 +333,7 @@
                 var request = new XMLHttpRequest();
                 let fullUrl = url+ '/.json?limit='+quantity+afterPageCall;
                 // url+ '/top/.json?limit='+quantity+'&t=month&after='+afterPageCall;
-                // "https://reddit.com/user/godofsmiles1/m/tasteful_nudies/top/.json?limit=100&t=all"
+                // "https://api.reddit.com/user/godofsmiles1/m/tasteful_nudies/top/.json?limit=100&t=all"
                 console.log(quantity);
                 console.log(fullUrl);
                 request.open('GET', fullUrl, true);
